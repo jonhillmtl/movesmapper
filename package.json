@@ -1,0 +1,19 @@
+{
+  "name": "movesapp",
+  "version": "0.0.0",
+  "description": "moves visualizer",
+  "main": "site.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "moves",
+    "visualization"
+  ],
+  "author": "jon@jonhill.ca",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.4.4",
+    "logfmt": "^1.1.2"
+  }
+}

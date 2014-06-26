@@ -19,15 +19,13 @@ router.get('/', function(req, res) {
         function (error, response, body) {
             if (!error && response.statusCode == 200) 
             {
-                access_token_body = body;
-                console.log(body);
+                res.render('authenticate_redirect', 
+                    { title: 'Authenticate Redirect', 
+                      access_token_body : access_token_body, 
+                      access_token_url : access_token_url
+                    }
+                );
             }
-        }
-    );
-    res.render('authenticate_redirect', 
-        { title: 'Authenticate Redirect', 
-          access_token_body : access_token_body, 
-          access_token_url : access_token_url
         }
     );
 });

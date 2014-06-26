@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.cookieParser());
-app.use(express.session({secret : process.env['SESSION_SECRET']});
+app.use(express.session({secret : process.env['SESSION_SECRET']}));
 
 app.use('/', routes);
 app.use('/users', users);

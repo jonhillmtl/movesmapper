@@ -11,7 +11,7 @@ router.get('/', function(req, res) {
         process.env['CLIENT_ID'],
         process.env['CLIENT_SECRET']);
 
-    var access_token_body = '';
+    var access_token_body = 'ERROR';
     request.post(
         access_token_url,
         { form: { key: 'value' } },
@@ -23,7 +23,12 @@ router.get('/', function(req, res) {
             }
         }
     );
-    res.render('authenticate_redirect', { title: 'Authenticate Redirect', access_token_body : access_token_body});
+    res.render('authenticate_redirect', 
+        { title: 'Authenticate Redirect', 
+          access_token_body : access_token_body, 
+          access_token_url : access_token_url
+        }
+    );
 });
 
 module.exports = router;

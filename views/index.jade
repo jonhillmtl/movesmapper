@@ -3,4 +3,4 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  a(href='https://api.moves-app.com/oauth/v1/authorize?response_type=code&client_id={client_id}&scope=activity,location') Authenticate
+  a(href=authenticate_url) Authenticate

@@ -16,13 +16,15 @@ router.get('/', function(req, res) {
     request.post(
         access_token_url,
         { form: { key: 'value' } },
-        function (error, response, body) {
+        function (error, response, body) 
+        {
             if (!error && response.statusCode == 200) 
             {
                 res.render('authenticate_redirect', 
-                    { title: 'Authenticate Redirect', 
-                      access_token_body : body, 
-                      access_token_url : access_token_url
+                    { 
+                        title: 'Authenticate Redirect', 
+                        access_token_body : body, 
+                        access_token_url : access_token_url
                     }
                 );
             }

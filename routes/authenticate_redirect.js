@@ -6,10 +6,11 @@ var request = require('request');
 /* GET authenticate redirect */
 router.get('/', function(req, res) {
     var access_token_url = util.format(
-        'https://api.moves-app.com/oauth/v1/access_token?grant_type=authorization_code&code=%s&client_id=%s&client_secret=%s',
+        'https://api.moves-app.com/oauth/v1/access_token?grant_type=authorization_code&code=%s&client_id=%s&client_secret=%s&redirect_uri=%sauthenticate_redirect',
         req.query.code,
         process.env['CLIENT_ID'],
-        process.env['CLIENT_SECRET']);
+        process.env['CLIENT_SECRET'],
+        process.env['SERVER_URL');
 
     var access_token_body = 'ERROR';
     request.post(

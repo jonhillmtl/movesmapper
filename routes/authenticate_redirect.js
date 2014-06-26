@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
         req.query.code,
         process.env['CLIENT_ID'],
         process.env['CLIENT_SECRET'],
-        process.env['SERVER_URL');
+        process.env['SERVER_URL']);
 
     var access_token_body = 'ERROR';
     request.post(

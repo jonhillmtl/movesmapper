@@ -1,6 +1,15 @@
 var express = require('express');
 var router = express.Router();
 
+String.prototype.format = function() {
+    var formatted = this;
+    for (var i = 0; i < arguments.length; i++) {
+        var regexp = new RegExp('\\{'+i+'\\}', 'gi');
+        formatted = formatted.replace(regexp, arguments[i]);
+    }
+    return formatted;
+};
+
 /* GET home page. */
 router.get('/', function(req, res) {
     var client_id = '3dM7jup81_5gWa5WrEgVeM162OOHMITX';

@@ -1,19 +1,17 @@
 {
-  "name": "movesapp",
-  "version": "0.0.0",
-  "description": "moves visualizer",
-  "main": "site.js",
+  "name": "movesmapper",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "keywords": [
-    "moves",
-    "visualization"
-  ],
-  "author": "jon@jonhill.ca",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.4.4",
-    "logfmt": "^1.1.2"
+    "express": "~4.2.0",
+    "static-favicon": "~1.0.0",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0"
   }
 }

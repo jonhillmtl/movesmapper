@@ -12,7 +12,6 @@ router.get('/', function(req, res) {
         process.env['CLIENT_SECRET'],
         process.env['SERVER_URL']);
 
-    var access_token_body = 'ERROR';
     request.post(
         access_token_url,
         { form: { key: 'value' } },
@@ -20,6 +19,8 @@ router.get('/', function(req, res) {
         {
             if (!error && response.statusCode == 200) 
             {
+                var access_token_json = JSON.parse(body);
+                req.session.oauth.token = access_token_json['access_token'];
                 res.render('authenticate_redirect', 
                     { 
                         title: 'Authenticate Redirect', 

@@ -21,11 +21,15 @@ router.get('/', function(req, res) {
             {
                 var access_token_json = JSON.parse(body);
                 req.session.moves_access_token = access_token_json['access_token'];
+                req.session.moves_refresh_token = access_token_json['refresh_token'];
+                req.session.moves_user_id = access_token_json['user_id'];
                 res.render('authenticate_redirect', 
                     { 
                         title: 'Authenticate Redirect', 
                         access_token_body : body, 
-                        moves_access_token : req.session.moves_access_token
+                        moves_access_token : req.session.moves_access_token,
+                        moves_refresh_token : req.session.moves_refresh_token,
+                        moves_user_id : req.session.moves_user_id
                     }
                 );
             }

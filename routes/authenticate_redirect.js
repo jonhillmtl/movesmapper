@@ -20,12 +20,12 @@ router.get('/', function(req, res) {
             if (!error && response.statusCode == 200) 
             {
                 var access_token_json = JSON.parse(body);
-                req.session['moves_access_token'] = access_token_json['access_token'];
+                req.session.moves_access_token = access_token_json['access_token'];
                 res.render('authenticate_redirect', 
                     { 
                         title: 'Authenticate Redirect', 
                         access_token_body : body, 
-                        access_token_url : access_token_url
+                        moves_access_token : req.session.moves_access_token
                     }
                 );
             }

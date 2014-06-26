@@ -18,8 +18,8 @@ router.get('/', function(req, res) {
         function (error, response, body) {
             if (!error && response.statusCode == 200) 
             {
-                access_token_body = body
-                console.log(body)
+                access_token_body = body;
+                console.log(body);
             }
         }
     );

@@ -17,12 +17,12 @@ router.get('/', function(req, res) {
         { form: { key: 'value' } },
         function (error, response, body) 
         {
+            res.send('activities');
             if (!error && response.statusCode == 200) 
             {
-                // var access_token_json = JSON.parse(body);
                 res.render('activities', 
                     { 
-                        title : 'Authenticate Redirect', 
+                        title : 'Activities', 
                         body : body
                     }
                 );

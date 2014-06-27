@@ -12,12 +12,14 @@ router.get('/', function(req, res) {
         date,
         access_token);
 
+    res.send('activities');
+    /*
     request.post(
         activities_url,
         { form: { key: 'value' } },
         function (error, response, body) 
         {
-            res.send('activities');
+            
             if (!error && response.statusCode == 200) 
             {
                 res.render('activities', 
@@ -38,6 +40,7 @@ router.get('/', function(req, res) {
             }
         }
     );
+    */
 });
 
 module.exports = router;

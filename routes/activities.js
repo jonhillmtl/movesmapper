@@ -24,6 +24,14 @@ router.get('/', function(req, res)
                     }
                 );
             }
+            else
+            {
+                 res.render('activities', 
+                    { 
+                        title: 'Error - Activities'
+                    }
+                );
+            }
         }
     );
 });

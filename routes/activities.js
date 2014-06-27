@@ -29,7 +29,7 @@ router.get('/', function(req, res) {
             }
             else
             {
-                res.render('error', 
+                res.render('api_error', 
                     { 
                         error : error,
                         response : response

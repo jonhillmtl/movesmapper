@@ -9,6 +9,7 @@ var session = require('express-session');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var authenticate_redirect = require('./routes/authenticate_redirect');
+var activities = require('./routes/activities');
 
 var app = express();
 
@@ -27,6 +28,7 @@ app.use(session({secret : process.env['SESSION_SECRET']}));
 app.use('/', routes);
 app.use('/users', users);
 app.use('/authenticate_redirect', authenticate_redirect);
+app.use('/activities', activities);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

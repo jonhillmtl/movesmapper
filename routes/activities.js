@@ -7,7 +7,7 @@ var request = require('request');
 router.get('/', function(req, res) 
 {
     var activities_url = util.format(
-        'https://api.moves-app.com/api/1.1//user/activities/daily/%s?access_token=%s',
+        'https://api.moves-app.com/api/1.1/user/activities/daily/%s?access_token=%s',
         '04042014',
         req.session.moves_access_token);
 

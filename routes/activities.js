@@ -22,7 +22,7 @@ router.get('/', function(req, res) {
                 // var access_token_json = JSON.parse(body);
                 res.render('activities', 
                     { 
-                        title: 'Authenticate Redirect', 
+                        title : 'Authenticate Redirect', 
                         body : body
                     }
                 );
@@ -31,7 +31,7 @@ router.get('/', function(req, res) {
             {
                 res.render('error', 
                     { 
-                        error: error,
+                        error : error,
                         response : response
                     }
                 );

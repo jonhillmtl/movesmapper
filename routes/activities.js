@@ -31,7 +31,8 @@ router.get('/', function(req, res) {
             {
                 res.render('error', 
                     { 
-                        error: error
+                        error: error,
+                        response : response
                     }
                 );
             }

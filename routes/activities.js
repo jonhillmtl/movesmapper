@@ -5,13 +5,14 @@ var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    var access_token = req.session.moves_access_token;
-    var date = '04042014';
+    // var access_token = req.session.moves_access_token;
+    // var date = '04042014';
+    /*
     var activities_url = util.format(
         'https://api.moves-app.com/api/1.1/user/activities/daily/%s?access_token=%s',
         date,
         access_token);
-
+    */
     res.send('activities');
     /*
     request.post(

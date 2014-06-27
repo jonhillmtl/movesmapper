@@ -28,7 +28,9 @@ router.get('/', function(req, res)
             {
                  res.render('api_error', 
                     { 
-                        title: 'Error - Activities'
+                        title : 'Error - Activities',
+                        error : error,
+                        response : response
                     }
                 );
             }

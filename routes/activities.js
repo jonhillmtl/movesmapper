@@ -30,7 +30,8 @@ router.get('/', function(req, res)
                     { 
                         title : 'Error - Activities',
                         error : error,
-                        response : response
+                        response : response,
+                        url : activities_url
                     }
                 );
             }

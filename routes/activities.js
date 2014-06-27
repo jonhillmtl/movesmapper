@@ -27,6 +27,14 @@ router.get('/', function(req, res) {
                     }
                 );
             }
+            else
+            {
+                res.render('error', 
+                    { 
+                        error: error
+                    }
+                );
+            }
         }
     );
 });

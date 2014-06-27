@@ -1,5 +1,7 @@
 var express = require('express');
 var router = express.Router();
+var util = require('util');
+var request = require('request');
 
 /* GET authenticate redirect */
 router.get('/', function(req, res) 

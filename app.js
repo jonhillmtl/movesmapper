@@ -13,6 +13,7 @@ var activities = require('./routes/activities');
 var tokens = require('./routes/tokens');
 
 var app = express();
+console.log(app)
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
